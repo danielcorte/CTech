@@ -105,4 +105,97 @@
     display: flex;
     column-gap: 20px;
 }
+
+/* ----- PRODUCTS ----- */
+
+/* .produtos {
+    display: flex;
+    justify-content: space-around;
+} */
+
+.flash-sales .container{
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+}
+
+.product-item {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    max-width: 223px;
+    max-height: 286px;
+}
+
+.product-item-img {
+    display: flex;
+    max-width: 222px;
+    max-height: 190px; 
+    background-color: gray;
+}
+
+.bi.bi-heart-fill {
+    position: absolute;
+    left: 140px;
+    top: 10px;
+    color: red;
+}
+
+.bi.bi-eye-fill {
+    position: absolute;
+    left: 140px;
+    top: 30px;
+    color: #fff;
+}
+
+.product-item-img p {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    font-size: 0.9em;
+    background-color: yellow;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.product-item-img img {
+    max-width: 189px;
+    max-height: 168px;
+}
+
+.product-item-content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4px;
+}
+
+.product-item-content-name {
+    display: flex;
+}
+
+.product-item-content-price {
+    display: flex;
+}
+
+.product-item-content-price-full {
+    color: gray;
+    text-decoration: line-through;
+    padding-right: 7px;
+}
+
+.product-item-content-price-descont {
+    color: lime;
+    font-weight: bold;
+    text-shadow: 
+        -0.3px -0.3px 0 black,  
+         0.3px -0.3px 0 black,
+        -0.3px  0.3px 0 black,
+         0.3px  0.3px 0 black;
+}
+
+.product-item-content-review {
+    display: flex;
+}
+/* ----- FIM PRODUCTS ----- */
+
 /* ----- FOOTER -----*/
