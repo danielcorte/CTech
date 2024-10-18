@@ -229,7 +229,7 @@
     display: flex;
     flex-direction: column;
     height: 400px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 .infomations { 
@@ -265,6 +265,7 @@
 }
 
 .categories-items {
+    position: relative;
     display: flex;
     background-color: #ccc;
     justify-content: space-around;
@@ -282,6 +283,11 @@
     width: 150px;
 }
 
+.categories-item:hover {
+    box-shadow: 3px 3px 3px #fff;
+    padding: 10px 0 0 10px;
+}
+
 .categories-item i {
     display: flex;
     color: #fff;
@@ -297,12 +303,28 @@
     color: #fff;
 }
 
+hr {
+    padding: 1px solid black;
+}
+
+.best-selling {
+    display: flex;
+    flex-direction: column;
+}
+
+.this-month .container {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    /* border: 1px solid blue; */
+}
+
 /* ----- FIM MAIN CONTENT ----- */
 
 /* ----- FOOTER ----- */
 
 .quality-group-footer {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     width: 100%;
     justify-content: space-between;
