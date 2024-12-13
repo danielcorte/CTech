@@ -1,0 +1,132 @@
+#product_page, #checkout, #billing{
+    display: grid;
+    column-gap: 32px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "col1 col2";
+  }
+
+.total_container {
+    align-items: center;
+    border: 1px solid ;
+    padding: 16px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.checkout_btn {
+        margin-bottom: 15px;
+        width: 100%;
+        font-size: 20px;
+        padding: 10px 0px;
+    }
+
+.total {
+        padding-bottom: 10px;
+
+    }
+
+.total.container-flex {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 60px;
+}
+
+.total.container-flex-value {
+    width: 9vw;
+}
+
+@media (max-width: 1424px) {
+    .total.container-flex {
+        grid-template-columns: 1fr; /* 2 colunas em telas menores */
+    }
+}
+
+.total:nth-child(2) h3{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.total:nth-child(3){
+    border-top: 1px solid;
+    padding-top: 5px;
+}
+
+/* AAAAAA  */
+
+.container-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+
+
+
+.payment {
+    padding:10px 0px
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px;
+    width:100%
+}
+
+.form-field label {
+    padding-bottom: 5px;
+    font-size: 12px;
+}
+
+.form-field input, select{
+    padding:10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #e4e4e4;
+}
+
+.form-field.cep,.form-field.uf{
+    width: 20%;
+}
+
+
+.form-group {
+    column-gap: 16px;
+}
+
+.pay-method input{
+    margin-right: 3px;
+}
+
+.cvv{
+    width: 20%;
+}
+
+.val{
+    width: 30%;
+}
+
+.card-info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+    column-gap: 16px;
+}
+
+.button.checkout_btn {
+    background-color: rgb(77, 115, 240);
+    color: #fff;
+    border: 1px solid blue;
+    transition: 0.3s;
+}
+
+.button.checkout_btn:hover {
+    transform: scale(1.03);
+    box-shadow: 1px 1px 1px 1px blue;
+}

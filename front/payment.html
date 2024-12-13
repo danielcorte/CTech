@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CTech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">    
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="./styles/payment.css">
+  <link rel="shortcut icon" href="images/favicon-pirata.png" type="image/x-icon">
+  <script src="./scripts/payment.js" type="module" defer></script>
+</head>
+
+<body>
+
+  <!-- header -->
+  <header id="header">
+
+    <!-- info bar -->
+    <div class="info-bar">
+      <div class="container">
+        <p>Todo o mês de dezembro com frete grátis</p>
+      </div>
+    </div>
+
+    <!-- cabecalho principal -->
+    <div id="main-header">
+      <div class="container">
+
+        <!-- logo -->
+        <div class="header_logo_container">
+          <a href="index.html">
+            <img class="logo" src="images/logo.png" alt="Logomarca da Ctech"/>
+          </a>
+        </div>
+
+        <!-- barra de navegação -->
+        <nav id="navBar-header">
+          <ul>
+              <a href="index.html">
+                <li>Home</li>
+              </a>
+              <a href="about-us.html">
+                <li>Sobre nós</li>
+              </a>
+              <a href="contact-me.html">
+                <li>Contato</li>
+              </a>
+              <a href="products.html">
+                <li>Produtos</li>
+              </a>
+            </ul>
+    </nav>
+    <!-- fim barra de navegação -->
+
+        <!-- barra de pesquisa -->
+        <div class="header_search_bar">
+          <i class="bi bi-search"></i>
+          <input
+            type="search"
+            name=""
+            id=""
+            placeholder="O que você está procurando? "
+          />
+        </div>
+
+        <!-- icones -->
+        <div class="header_icons">
+          <a href="adm.html" class="product-card-btn-person"><i class="bi bi-person"></i></a>
+          <!-- <a href="#"><i class="bi bi-heart"></i></a> -->
+          <a href="checkout.html" class="product-card-btn-cart"><i class="bi bi-cart"></i></a>
+        </div>
+
+      </div>
+    </div>
+
+    </header>
+    <!-- fim cabecalho -->
+
+  <!-- Componente Formulario conclusao de compra -->
+  <main class="product main-content container">
+    <div class="product text-container">
+      <h2 class="main-text">Checkout</h2>
+      <p>Verifique os itens do carrinho e finalize agora</p>
+    </div>
+
+    <section class="product text-container">
+      <div id="billing">
+        <div class="grid_col_1">
+          <form action="">
+            <h2>Seus Dados:</h2>
+            <div class="form-fields">
+              <div class="form-field">
+                <label for="eemail">E-mail</label>
+                <input type="e-mail" name="e-mail" id="e-mail" placeholder="e-mail">
+              </div>
+              <div class="form-group container-flex">
+                <div class="form-field">
+                  <label for="name">Nome</label>
+                  <input type="text" name="name" id="name" placeholder="Nome">
+                </div>
+                <div class="form-field">
+                  <label for="Sobrenome">Sobrenome</label>
+                  <input type="text" name="surname" id="surname" placeholder="Sobrenome">
+                </div>
+              </div>
+
+              <div class="form-group container-flex">
+                <div class="form-field">
+                  <label for="phone">Telefone</label>
+                  <input type="text" name="phone" id="phone" placeholder="Telefone com DDD">
+                </div>
+                <div class="form-field">
+                  <label for="CPF">CPF</label>
+                  <input type="text" name="CPF" id="CPF" placeholder="CPF">
+                </div>
+              </div>
+              <div class="form-group container-flex">
+                <div class="form-field">
+                  <label for="address">Logradouro</label>
+                  <input type="text" name="address" id="address" placeholder="Logradouro">
+                </div>
+                <div class="form-field cep">
+                  <label for="zip">CEP</label>
+                  <input type="text" name="zip" id="zip" placeholder="CEP">
+                </div>
+              </div>
+
+
+              <div class="form-group container-flex">
+                <div class="form-field">
+                  <label for="address">Nº</label>
+                  <input type="text" name="number" id="number" placeholder="Nº">
+                </div>
+                <div class="form-field">
+                  <label for="addressComplement">Complemento</label>
+                  <input type="addressComplement" name="addressComplement" id="addressComplement" placeholder="Complemento">
+                </div>
+                <div class="form-field">
+                  <label for="neighborhood">Bairro</label>
+                  <input type="text" name="neighborhood" id="neighborhood" placeholder="Bairro">
+                </div>
+              </div>
+
+              <div class="form-group container-flex">
+
+                <div class="form-field">
+                  <label for="city">Cidade</label>
+                  <input type="text" name="city" id="city" placeholder="Cidade">
+                </div>
+                <div class="form-field uf">
+                  <label for="state">Estado</label>
+                  <select id="estado" name="UF">
+                    <option value="" selected>Selecione...</option>
+                    <option value="AC">AC</option>
+                    <option value="AL">AL</option>
+                    <option value="AP">AP</option>
+                    <option value="AM">AM</option>
+                    <option value="BA">BA</option>
+                    <option value="CE">CE</option>
+                    <option value="DF">DF</option>
+                    <option value="ES">ES</option>
+                    <option value="GO">GO</option>
+                    <option value="MA">MA</option>
+                    <option value="MT">MT</option>
+                    <option value="MS">MS</option>
+                    <option value="MG">MG</option>
+                    <option value="PA">PA</option>
+                    <option value="PB">PB</option>
+                    <option value="PR">PR</option>
+                    <option value="PE">PE</option>
+                    <option value="PI">PI</option>
+                    <option value="RJ">RJ</option>
+                    <option value="RN">RN</option>
+                    <option value="RS">RS</option>
+                    <option value="RO">RO</option>
+                    <option value="RR">RR</option>
+                    <option value="SC">SC</option>
+                    <option value="SP">SP</option>
+                    <option value="SE">SE</option>
+                    <option value="TO">TO</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </form>
+
+        </div>
+
+        <div class="grid_col_2">
+
+          <div class="total_container container-flex column">
+            <div class="total container-flex">
+              <h3>SUBTOTAL</h3>
+              <H3 class="total container-flex-value">R$ 0.00</H3>
+            </div>
+            <div class="total container-flex">
+              <h3>Frete</h3>
+              <H3 class="total container-flex-value">R$ 0.00</H3>
+            </div>
+            <div class="total container-flex">
+              <h3>Total</h3>
+              <H3 class="total container-flex-value">R$ 0.00</H3>
+            </div>
+
+          </div>
+
+          <button class="button checkout_btn">Finalizar</button>
+
+          <form class="container-flex">
+            <div class="pay-method">
+              <input type="radio" name="pagamento" id="credito" checked><label for="credito">Crédito</label>
+            </div>
+            <div class="pay-method">
+              <input type="radio" name="pagamento" id="pix"><label for="pix">PIX</label>
+            </div>
+            <div class="pay-method">
+              <input type="radio" name="pagamento" id="debito"><label for="debito">Débito</label>
+            </div>
+            <div class="pay-method">
+              <input type="radio" name="pagamento" id="bol"><label for="bol">Boleto</label>
+            </div>
+          </form>
+          <form class="payment">
+            <div class="form-field">
+              <label for="nome_cartao">Nome no Cartão:</label>
+              <input type="text" id="nome_cartao" name="nome_cartao" required>
+            </div>
+
+            <div class="form-field">
+              <label for="numero_cartao">Número do Cartão:</label>
+              <input type="text" id="numero_cartao" name="numero_cartao" maxlength="16" required>
+            </div>
+
+            <div class="card-info">
+              <div class="form-field val">
+                <label for="validade_cartao">Validade:</label>
+                <input type="text" id="validade_cartao" name="validade_cartao" placeholder="MM/AA" maxlength="5"
+                  required>
+              </div>
+
+              <div class="form-field cvv">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" maxlength="3" required>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- rodade -->
+  <footer id="rodape">
+    <div class="container">
+
+      <div class="quality-group-footer">
+
+        <div class="quality-item-footer">
+
+          <div class="quality-item-footer-circulus">
+            <i class="bi bi-truck"></i>
+          </div>
+          <h2>Entrega rápida e segura</h2>
+          <p>Site top1 entregas em todo o Brasil</p>
+        </div>
+
+        <div class="quality-item-footer">
+
+          <div class="quality-item-footer-circulus">
+            <i class="bi bi-headset"></i>
+          </div>
+          <h2>Atendimento ao cliente 24/7</h2>
+          <p>Temos um suporte premium ao nosso</p>
+          <p>consumidor</p>
+        </div>
+
+        <div class="quality-item-footer">
+
+          <div class="quality-item-footer-circulus">
+            <i class="bi bi-shield-shaded"></i>
+          </div>
+          <h2>Garantia de devolução do dinheiro</h2>
+          <p>Devolvemos seu dinheiro em até 30 dias</p>
+        </div>
+
+      </div>
+
+    </div>
+
+      <div id="copyright">
+        <p>©️ Daniel Corte  Todos os direitos reservados | <a href="contact-me.html">Contato</a> | <a href="about-us.html">Sobre</a></p>
+      </div>
+
+  </footer>
+  <!-- fim do rodape -->
+
+</body>
+</html>

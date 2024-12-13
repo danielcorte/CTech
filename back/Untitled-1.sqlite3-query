@@ -1,0 +1,233 @@
+-- database: ./database.sqlite3
+
+SELECT * FROM "table-name";
+
+CREATE TABLE "api_produto" (
+    "codigoProduto" INTEGER PRIMARY KEY AUTOINCREMENT, 
+    "tituloProduto" TEXT NOT NULL, 
+    "preco" DECIMAL(10,2) NOT NULL, 
+    "descricao" TEXT NOT NULL, 
+    "imagensProduto" TEXT NOT NULL, 
+    "categoriaProduto" TEXT NOT NULL, 
+    "classificacaoProduto" TEXT NOT NULL DEFAULT 'Desconhecido', 
+    "exibirHome" BOOLEAN NOT NULL DEFAULT TRUE
+);
+
+INSERT INTO api_produto (tituloProduto, preco, descricao, imagensProduto, categoriaProduto, classificacaoProduto, exibirHome)
+VALUES 
+("Samsung Galaxy S23 Ultra 512GB", 6899.99, "O Samsung Galaxy S23 Ultra traz inovação e design elegante com uma câmera de 200MP e desempenho ultra-rápido com o processador Snapdragon 8 Gen 2.", 
+ '{"img1": "./images/products/prod01/img1.png", "img2": "./images/products/prod01/img2.png", "img3": "./images/products/prod01/img3.png", "img4": "./images/products/prod01/img4.png"}', 
+ "Celulares", "Novidades", 1);
+
+INSERT INTO api_produto (codigoProduto, tituloProduto, preco, descricao, imagensProduto, categoriaProduto, classificacaoProduto, exibirHome) 
+VALUES 
+(1, "Samsung Galaxy S23 Ultra 512GB", 6899.99, "O Samsung Galaxy S23 Ultra traz inovação e design elegante com uma câmera de 200MP e desempenho ultra-rápido com o processador Snapdragon 8 Gen 2.",
+ '{"img1": "./images/products/prod01/img1.png", "img2": "./images/products/prod01/img2.png", "img3": "./images/products/prod01/img3.png", "img4": "./images/products/prod01/img4.png"}', 
+ "Celulares", "Novidades", 1),
+
+(2, "Apple iPhone 15 Pro Max 512GB", 10999.99, "O iPhone 15 Pro Max apresenta um design sofisticado com um chip A17 Pro, câmera de 48MP e performance incrível para todas as tarefas.",
+ '{"img1": "./images/products/prod02/img1.png", "img2": "./images/products/prod02/img2.png", "img3": "./images/products/prod02/img3.png", "img4": "./images/products/prod02/img4.png"}', 
+ "Celulares", "Novidades", 1),
+
+(3, "Xiaomi 13 Pro 256GB", 5399.99, "Com uma câmera Leica de 50MP e o processador Snapdragon 8 Gen 2, o Xiaomi 13 Pro oferece performance e qualidade de imagem de ponta.",
+ '{"img1": "./images/products/prod03/img1.png", "img2": "./images/products/prod03/img2.png", "img3": "./images/products/prod03/img3.png", "img4": "./images/products/prod03/img4.png"}', 
+ "Celulares", "Novidades", 1),
+
+(4, "Samsung Galaxy Z Fold 5 512GB", 13999.99, "Com tela dobrável de 7.6 polegadas, o Samsung Galaxy Z Fold 5 traz o futuro da tecnologia móvel. Oferece uma experiência imersiva para quem deseja um dispositivo inovador.",
+ '{"img1": "./images/products/prod04/img1.png", "img2": "./images/products/prod04/img2.png", "img3": "./images/products/prod04/img3.png", "img4": "./images/products/prod04/img4.png"}', 
+ "Celulares", "Lançamentos", 1),
+
+(5, "Apple iPhone 14 128GB", 4999.99, "Com tela Super Retina XDR e chip A15 Bionic, o iPhone 14 oferece uma excelente performance e câmeras de alta qualidade.",
+ '{"img1": "./images/products/prod05/img1.png", "img2": "./images/products/prod05/img2.png", "img3": "./images/products/prod05/img3.png", "img4": "./images/products/prod05/img4.png"}', 
+ "Celulares", "Mais Vendidos", 1),
+
+(6, "Xiaomi Redmi Note 12 Pro 128GB", 1799.99, "O Xiaomi Redmi Note 12 Pro oferece ótimo desempenho com seu processador MediaTek Dimensity 1080 e câmera de 50MP, com preço acessível.",
+ '{"img1": "./images/products/prod06/img1.png", "img2": "./images/products/prod06/img2.png", "img3": "./images/products/prod06/img3.png", "img4": "./images/products/prod06/img4.png"}', 
+ "Celulares", "Promoções", 1),
+
+(7, "Samsung Galaxy A54 5G 128GB", 2299.99, "O Samsung Galaxy A54 5G traz uma tela AMOLED de 120Hz, ótimo desempenho com o Exynos 1380 e câmeras de alta qualidade, tudo a um preço acessível.",
+ '{"img1": "./images/products/prod07/img1.png", "img2": "./images/products/prod07/img2.png", "img3": "./images/products/prod07/img3.png", "img4": "./images/products/prod07/img4.png"}', 
+ "Celulares", "Mais Vendidos", 1),
+
+(8, "Apple iPhone 13 256GB", 7999.99, "O iPhone 13 oferece uma excelente performance com seu chip A15 Bionic e câmeras de 12MP para fotos e vídeos incríveis.",
+ '{"img1": "./images/products/prod08/img1.png", "img2": "./images/products/prod08/img2.png", "img3": "./images/products/prod08/img3.png", "img4": "./images/products/prod08/img4.png"}', 
+ "Celulares", "Lançamentos", 1),
+
+(9, "Xiaomi Poco F5 256GB", 2299.99, "Com tela AMOLED de 6.67 polegadas e processador Snapdragon 7+ Gen 2, o Poco F5 oferece performance superior a um preço acessível.",
+ '{"img1": "./images/products/prod09/img1.png", "img2": "./images/products/prod09/img2.png", "img3": "./images/products/prod09/img3.png", "img4": "./images/products/prod09/img4.png"}', 
+ "Celulares", "Promoções", 1),
+
+(10, "Samsung Galaxy Z Flip 5 256GB", 8999.99, "O Samsung Galaxy Z Flip 5 combina design compacto com a inovação da tela dobrável, perfeito para quem busca estilo e praticidade.",
+ '{"img1": "./images/products/prod10/img1.png", "img2": "./images/products/prod10/img2.png", "img3": "./images/products/prod10/img3.png", "img4": "./images/products/prod10/img4.png"}', 
+ "Celulares", "Mais Vendidos", 1);
+
+DELETE FROM api_produto
+WHERE tituloProduto = "Samsung Galaxy S23 Ultra 512GB";
+
+INSERT INTO api_produto (codigoProduto, tituloProduto, preco, descricao, imagensProduto, categoriaProduto, classificacaoProduto, exibirHome)
+VALUES 
+(11, "Dell Inspiron 15 5000 Intel Core i5 8GB 512GB SSD", 4299.99, "O Dell Inspiron 15 5000 combina desempenho rápido com um design elegante, ideal para tarefas diárias e trabalho remoto.",
+ '{"img1": "./images/products/prod11/img1.png", "img2": "./images/products/prod11/img2.png", "img3": "./images/products/prod11/img3.png", "img4": "./images/products/prod11/img4.png"}', 
+ "Notebooks", "Lançamentos", 1),
+ 
+(12, "Acer Aspire 5 Intel Core i7 16GB 512GB SSD", 5999.99, "Com o potente processador Intel Core i7 e 16GB de RAM, o Acer Aspire 5 é perfeito para produtividade e multitarefas.",
+ '{"img1": "./images/products/prod12/img1.png", "img2": "./images/products/prod12/img2.png", "img3": "./images/products/prod12/img3.png", "img4": "./images/products/prod12/img4.png"}',
+ "Notebooks", "Novidades", 1),
+ 
+(13, "Lenovo IdeaPad 3 Intel Core i5 8GB 256GB SSD", 3399.99, "O Lenovo IdeaPad 3 oferece um excelente custo-benefício com desempenho rápido e eficiente, perfeito para trabalho e estudo.",
+ '{"img1": "./images/products/prod13/img1.png", "img2": "./images/products/prod13/img2.png", "img3": "./images/products/prod13/img3.png", "img4": "./images/products/prod13/img4.png"}',
+ "Notebooks", "Promoções", 1),
+ 
+(14, "Dell XPS 13 9310 Intel Core i7 16GB 1TB SSD", 12499.99, "Com design premium e desempenho poderoso, o Dell XPS 13 é ideal para profissionais que buscam excelência em suas tarefas diárias.",
+ '{"img1": "./images/products/prod14/img1.png", "img2": "./images/products/prod14/img2.png", "img3": "./images/products/prod14/img3.png", "img4": "./images/products/prod14/img4.png"}',
+ "Notebooks", "Lançamentos", 1),
+ 
+(15, "Acer Nitro 5 Intel Core i7 16GB 512GB SSD RTX 3060", 7999.99, "O Acer Nitro 5 foi projetado para gamers, oferecendo um desempenho incrível com a placa gráfica RTX 3060 e tela de alta taxa de atualização.",
+ '{"img1": "./images/products/prod15/img1.png", "img2": "./images/products/prod15/img2.png", "img3": "./images/products/prod15/img3.png", "img4": "./images/products/prod15/img4.png"}',
+ "Notebooks", "Mais Vendidos", 1),
+ 
+(16, "Lenovo Legion 5 Pro Intel Core i7 16GB 1TB SSD RTX 3070", 10999.99, "Com o poderoso processador Intel Core i7 e a placa gráfica RTX 3070, o Lenovo Legion 5 Pro é a escolha certa para gamers e criadores de conteúdo.",
+ '{"img1": "./images/products/prod16/img1.png", "img2": "./images/products/prod16/img2.png", "img3": "./images/products/prod16/img3.png", "img4": "./images/products/prod16/img4.png"}',
+ "Notebooks", "Promoções", 1),
+ 
+(17, "Lenovo ThinkPad X1 Carbon Gen 10 Intel Core i7 16GB 512GB SSD", 10499.99, "O Lenovo ThinkPad X1 Carbon Gen 10 oferece desempenho empresarial de alta performance com um design ultrafino e resistência premium.",
+ '{"img1": "./images/products/prod17/img1.png", "img2": "./images/products/prod17/img2.png", "img3": "./images/products/prod17/img3.png", "img4": "./images/products/prod17/img4.png"}',
+ "Notebooks", "Lançamentos", 1),
+ 
+(18, "Acer Predator Helios 300 Intel Core i9 32GB 1TB SSD RTX 3080", 14999.99, "Com uma tela de 165Hz e o poderoso processador Intel Core i9 e GPU RTX 3080, o Acer Predator Helios 300 é perfeito para gamers e criadores de conteúdo.",
+ '{"img1": "./images/products/prod18/img1.png", "img2": "./images/products/prod18/img2.png", "img3": "./images/products/prod18/img3.png", "img4": "./images/products/prod18/img4.png"}',
+ "Notebooks", "Mais Vendidos", 1),
+ 
+(19, "Dell Alienware X17 Intel Core i9 32GB 1TB SSD RTX 3080", 16999.99, "O Alienware X17 combina a última tecnologia com um design futurista, trazendo gráficos RTX 3080 e um desempenho de tirar o fôlego para gamers e profissionais.",
+ '{"img1": "./images/products/prod19/img1.png", "img2": "./images/products/prod19/img2.png", "img3": "./images/products/prod19/img3.png", "img4": "./images/products/prod19/img4.png"}',
+ "Notebooks", "Lançamentos", 1),
+ 
+(20, "Apple MacBook Air M2 256GB", 8499.99, "O MacBook Air M2 oferece desempenho incrível com o chip M2 da Apple, combinando eficiência energética e portabilidade com uma tela de 13,6 polegadas.",
+ '{"img1": "./images/products/prod20/img1.png", "img2": "./images/products/prod20/img2.png", "img3": "./images/products/prod20/img3.png", "img4": "./images/products/prod20/img4.png"}',
+ "Notebooks", "Mais Vendidos", 1);
+
+INSERT INTO api_produto (codigoProduto, tituloProduto, preco, descricao, imagensProduto, categoriaProduto, classificacaoProduto, exibirHome)
+VALUES 
+(21, "Acer Aspire 7 Intel Core i5 8GB 512GB SSD GTX 1650", 3999.99, "O Acer Aspire 7 combina a performance do processador Intel Core i5 e a placa de vídeo GTX 1650, oferecendo excelente desempenho para jogos e produtividade.",
+ '{"img1": "./images/products/prod21/img1.png", "img2": "./images/products/prod21/img2.png", "img3": "./images/products/prod21/img3.png", "img4": "./images/products/prod21/img4.png"}', 
+ "Notebooks", "Lançamentos", 1),
+
+(22, "Lenovo Yoga 9i Intel Core i7 16GB 512GB SSD", 8999.99, "O Lenovo Yoga 9i é um notebook 2-em-1 com design premium e potente desempenho, perfeito para quem precisa de versatilidade e alta performance.",
+ '{"img1": "./images/products/prod22/img1.png", "img2": "./images/products/prod22/img2.png", "img3": "./images/products/prod22/img3.png", "img4": "./images/products/prod22/img4.png"}',
+ "Notebooks", "Lançamentos", 1),
+
+(23, "Samsung Galaxy Book Pro Intel Core i7 16GB 512GB SSD", 6599.99, "O Samsung Galaxy Book Pro combina um design ultrafino com o desempenho poderoso do processador Intel Core i7 e tela AMOLED para uma experiência visual de alta qualidade.",
+ '{"img1": "./images/products/prod23/img1.png", "img2": "./images/products/prod23/img2.png", "img3": "./images/products/prod23/img3.png", "img4": "./images/products/prod23/img4.png"}',
+ "Notebooks", "Mais Vendidos", 1),
+
+(24, "HP Omen 15 Intel Core i7 16GB 512GB SSD RTX 3060", 8499.99, "Com a placa gráfica RTX 3060 e o processador Intel Core i7, o HP Omen 15 é um notebook para gamers e criadores de conteúdo exigentes.",
+ '{"img1": "./images/products/prod24/img1.png", "img2": "./images/products/prod24/img2.png", "img3": "./images/products/prod24/img3.png", "img4": "./images/products/prod24/img4.png"}',
+ "Notebooks", "Promoções", 1),
+
+(25, "Asus ROG Zephyrus G14 AMD Ryzen 9 16GB 1TB SSD RTX 3070", 12999.99, "O Asus ROG Zephyrus G14 é um dos notebooks mais poderosos da categoria, com o novo processador AMD Ryzen 9 e GPU RTX 3070 para desempenho extremo em jogos e multitarefa.",
+ '{"img1": "./images/products/prod25/img1.png", "img2": "./images/products/prod25/img2.png", "img3": "./images/products/prod25/img3.png", "img4": "./images/products/prod25/img4.png"}',
+ "Notebooks", "Lançamentos", 1),
+
+(26, "Microsoft Surface Laptop 5 Intel Core i5 8GB 512GB SSD", 6999.99, "O Microsoft Surface Laptop 5 oferece um design premium, desempenho eficiente e uma tela PixelSense de alta resolução, ideal para profissionais e estudantes.",
+ '{"img1": "./images/products/prod26/img1.png", "img2": "./images/products/prod26/img2.png", "img3": "./images/products/prod26/img3.png", "img4": "./images/products/prod26/img4.png"}',
+ "Notebooks", "Mais Vendidos", 1),
+
+(27, "Mouse Logitech G Pro Wireless", 499.99, "O Mouse Logitech G Pro Wireless foi desenvolvido para gamers profissionais, oferecendo alta precisão, desempenho sem fio e design ergonômico.",
+ '{"img1": "./images/products/prod27/img1.png", "img2": "./images/products/prod27/img2.png", "img3": "./images/products/prod27/img3.png", "img4": "./images/products/prod27/img4.png"}',
+ "Periféricos", "Mais Vendidos", 1),
+
+(28, "Teclado Mecânico Corsair K70 RGB MK.2", 799.99, "Teclado mecânico Corsair K70 RGB MK.2 com switches Cherry MX, retroiluminação RGB e teclas multimídia, ideal para gamers e profissionais.",
+ '{"img1": "./images/products/prod28/img1.png", "img2": "./images/products/prod28/img2.png", "img3": "./images/products/prod28/img3.png", "img4": "./images/products/prod28/img4.png"}',
+ "Periféricos", "Lançamentos", 1),
+
+(29, "Fone de Ouvido JBL Quantum One", 1299.99, "O Fone de Ouvido JBL Quantum One é projetado para gamers, oferecendo som surround de alta qualidade e microfone com cancelamento de ruído.",
+ '{"img1": "./images/products/prod29/img1.png", "img2": "./images/products/prod29/img2.png", "img3": "./images/products/prod29/img3.png", "img4": "./images/products/prod29/img4.png"}',
+ "Periféricos", "Novidades", 1),
+
+(30, "Mouse Razer DeathAdder V2", 449.99, "O Mouse Razer DeathAdder V2 possui sensor óptico de 20K DPI, switches ópticos Razer e design ergonômico, perfeito para jogos de alta performance.",
+ '{"img1": "./images/products/prod30/img1.png", "img2": "./images/products/prod30/img2.png", "img3": "./images/products/prod30/img3.png", "img4": "./images/products/prod30/img4.png"}',
+ "Periféricos", "Mais Vendidos", 1);
+
+INSERT INTO api_produto (codigoProduto, tituloProduto, preco, descricao, imagensProduto, categoriaProduto, classificacaoProduto, exibirHome)
+VALUES 
+(31, "Teclado Logitech G915 TKL Lightspeed", 1499.99, "Teclado mecânico sem fio Logitech G915 TKL com switches low profile, retroiluminação RGB e conectividade Lightspeed, ideal para gamers.",
+ '{"img1": "./images/products/prod31/img1.png", "img2": "./images/products/prod31/img2.png", "img3": "./images/products/prod31/img3.png", "img4": "./images/products/prod31/img4.png"}', 
+ "Periféricos", "Novidades", 1),
+
+(32, "Fone de Ouvido Sony WH-1000XM4", 2499.99, "Fone de ouvido Sony WH-1000XM4 oferece cancelamento de ruído ativo, qualidade de som premium e conforto para longas sessões de uso.",
+ '{"img1": "./images/products/prod32/img1.png", "img2": "./images/products/prod32/img2.png", "img3": "./images/products/prod32/img3.png", "img4": "./images/products/prod32/img4.png"}',
+ "Periféricos", "Mais Vendidos", 1),
+
+(33, "Mouse Logitech MX Master 3", 499.99, "Mouse Logitech MX Master 3 com design ergonômico, sensor de alta precisão e botões personalizáveis, ideal para produtividade e uso profissional.",
+ '{"img1": "./images/products/prod33/img1.png", "img2": "./images/products/prod33/img2.png", "img3": "./images/products/prod33/img3.png", "img4": "./images/products/prod33/img4.png"}',
+ "Periféricos", "Promoções", 1),
+
+(34, "Teclado HyperX Alloy FPS Pro", 599.99, "Teclado mecânico HyperX Alloy FPS Pro com switches Cherry MX, design compacto e retroiluminação vermelha, perfeito para gamers que buscam desempenho.",
+ '{"img1": "./images/products/prod34/img1.png", "img2": "./images/products/prod34/img2.png", "img3": "./images/products/prod34/img3.png", "img4": "./images/products/prod34/img4.png"}',
+ "Periféricos", "Lançamentos", 1),
+
+(35, "Fone de Ouvido Corsair HS70 Pro Wireless", 799.99, "Fone de Ouvido Corsair HS70 Pro Wireless com som de alta qualidade, conforto ergonômico e conectividade sem fio de longo alcance, ideal para gamers.",
+ '{"img1": "./images/products/prod35/img1.png", "img2": "./images/products/prod35/img2.png", "img3": "./images/products/prod35/img3.png", "img4": "./images/products/prod35/img4.png"}',
+ "Periféricos", "Promoções", 1),
+
+(36, "Teclado Razer BlackWidow V3", 799.99, "O Teclado Razer BlackWidow V3 oferece switches mecânicos Razer Green, retroiluminação RGB e construção robusta para uma experiência de jogo incomparável.",
+ '{"img1": "./images/products/prod36/img1.png", "img2": "./images/products/prod36/img2.png", "img3": "./images/products/prod36/img3.png", "img4": "./images/products/prod36/img4.png"}',
+ "Periféricos", "Mais Vendidos", 1),
+
+(37, "Mouse Razer Naga X", 399.99, "Mouse Razer Naga X com 16 botões programáveis, design ergonômico e sensor de 16.000 DPI, ideal para jogos MMO e MOBA.",
+ '{"img1": "./images/products/prod37/img1.png", "img2": "./images/products/prod37/img2.png", "img3": "./images/products/prod37/img3.png", "img4": "./images/products/prod37/img4.png"}',
+ "Periféricos", "Novidades", 1),
+
+(38, "Teclado Mecânico Redragon K582 SURARA", 249.99, "Teclado mecânico Redragon K582 SURARA com switches Outemu, retroiluminação RGB e design robusto, ideal para gamers.",
+ '{"img1": "./images/products/prod38/img1.png", "img2": "./images/products/prod38/img2.png", "img3": "./images/products/prod38/img3.png", "img4": "./images/products/prod38/img4.png"}',
+ "Periféricos", "Mais Vendidos", 1),
+
+(39, "Fone de Ouvido HyperX Cloud II", 699.99, "Fone de ouvido HyperX Cloud II com som surround 7.1, microfone com cancelamento de ruído e almofadas de memória para máximo conforto.",
+ '{"img1": "./images/products/prod39/img1.png", "img2": "./images/products/prod39/img2.png", "img3": "./images/products/prod39/img3.png", "img4": "./images/products/prod39/img4.png"}',
+ "Periféricos", "Lançamentos", 1),
+
+(40, "Mouse SteelSeries Rival 600", 499.99, "O Mouse SteelSeries Rival 600 é ideal para gamers com sensor duplo de 12.000 DPI, iluminação RGB personalizável e design ergonômico.",
+ '{"img1": "./images/products/prod40/img1.png", "img2": "./images/products/prod40/img2.png", "img3": "./images/products/prod40/img3.png", "img4": "./images/products/prod40/img4.png"}',
+ "Periféricos", "Mais Vendidos", 1);
+
+INSERT INTO api_produto (codigoProduto, tituloProduto, preco, descricao, imagensProduto, categoriaProduto, classificacaoProduto, exibirHome)
+VALUES 
+(41, "Teclado Logitech G213 Prodigy", 369.99, "Teclado mecânico Logitech G213 Prodigy com switches de membrana, retroiluminação RGB e design resistente à água.",
+ '{"img1": "./images/products/prod41/img1.png", "img2": "./images/products/prod41/img2.png", "img3": "./images/products/prod41/img3.png", "img4": "./images/products/prod41/img4.png"}',
+ "Periféricos", "Promoções", 1),
+
+(42, "Fone de Ouvido Logitech G Pro X", 1299.99, "Fone de ouvido Logitech G Pro X com som de alta qualidade, microfone Blue VO!CE e design confortável para longas sessões de jogo.",
+ '{"img1": "./images/products/prod42/img1.png", "img2": "./images/products/prod42/img2.png", "img3": "./images/products/prod42/img3.png", "img4": "./images/products/prod42/img4.png"}',
+ "Periféricos", "Mais Vendidos", 1),
+
+(43, "Teclado Mecânico Corsair K95 RGB Platinum XT", 1299.99, "Teclado mecânico Corsair K95 RGB Platinum XT com switches Cherry MX, retroiluminação RGB e teclas macro programáveis para jogos e produtividade.",
+ '{"img1": "./images/products/prod43/img1.png", "img2": "./images/products/prod43/img2.png", "img3": "./images/products/prod43/img3.png", "img4": "./images/products/prod43/img4.png"}',
+ "Periféricos", "Lançamentos", 1),
+
+(44, "Fone de Ouvido SteelSeries Arctis 7", 799.99, "Fone de ouvido SteelSeries Arctis 7 com som surround, microfone ClearCast e conforto superior para sessões de jogo prolongadas.",
+ '{"img1": "./images/products/prod44/img1.png", "img2": "./images/products/prod44/img2.png", "img3": "./images/products/prod44/img3.png", "img4": "./images/products/prod44/img4.png"}',
+ "Periféricos", "Promoções", 1),
+
+(45, "Mouse Logitech G502 Hero", 499.99, "Mouse Logitech G502 Hero com sensor de 16.000 DPI, 11 botões programáveis e iluminação RGB personalizável, ideal para gamers.",
+ '{"img1": "./images/products/prod45/img1.png", "img2": "./images/products/prod45/img2.png", "img3": "./images/products/prod45/img3.png", "img4": "./images/products/prod45/img4.png"}',
+ "Periféricos", "Mais Vendidos", 1),
+
+(46, "Teclado Razer Huntsman Mini", 999.99, "Teclado mecânico compacto Razer Huntsman Mini com switches ópticos, retroiluminação RGB e design compacto para otimizar seu espaço.",
+ '{"img1": "./images/products/prod46/img1.png", "img2": "./images/products/prod46/img2.png", "img3": "./images/products/prod46/img3.png", "img4": "./images/products/prod46/img4.png"}',
+ "Periféricos", "Lançamentos", 1),
+
+(47, "Google Pixel 8 Pro 128GB", 7999.99, "O Google Pixel 8 Pro traz o melhor da inteligência artificial com o chip Tensor G3 e câmeras que capturam fotos impressionantes em qualquer condição de luz.",
+ '{"img1": "./images/products/prod47/img1.png", "img2": "./images/products/prod47/img2.png", "img3": "./images/products/prod47/img3.png", "img4": "./images/products/prod47/img4.png"}',
+ "Celulares", "Lançamentos", 1),
+
+(48, "Motorola Edge 40 Pro 256GB", 4999.99, "Com tela curva OLED de 144Hz, o Motorola Edge 40 Pro oferece uma experiência imersiva e performance rápida com o Snapdragon 8 Gen 2.",
+ '{"img1": "./images/products/prod48/img1.png", "img2": "./images/products/prod48/img2.png", "img3": "./images/products/prod48/img3.png", "img4": "./images/products/prod48/img4.png"}',
+ "Celulares", "Mais Vendidos", 1),
+
+(49, "Sony Xperia 1 V 512GB", 9499.99, "O Sony Xperia 1 V é perfeito para criadores de conteúdo, com uma câmera profissional de 48MP e tela 4K HDR OLED de 120Hz.",
+ '{"img1": "./images/products/prod49/img1.png", "img2": "./images/products/prod49/img2.png", "img3": "./images/products/prod49/img3.png", "img4": "./images/products/prod49/img4.png"}',
+ "Celulares", "Lançamentos", 1),
+
+(50, "Asus ROG Phone 7 Ultimate 512GB", 8999.99, "O Asus ROG Phone 7 Ultimate é o smartphone gamer definitivo, com tela AMOLED de 165Hz e resfriamento avançado para longas sessões de jogo.",
+ '{"img1": "./images/products/prod50/img1.png", "img2": "./images/products/prod50/img2.png", "img3": "./images/products/prod50/img3.png", "img4": "./images/products/prod50/img4.png"}',
+ "Celulares", "Promoções", 1);

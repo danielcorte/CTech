@@ -1,0 +1,237 @@
+/* ----- CSS RESET ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ /* ----- titulos e textos ----- */
+ body {
+    font-family: "Inter", sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+
+    
+ }
+
+ /* ----- layout -----*/
+
+.container {
+    min-width: 375px;
+    max-width: 100%;
+    margin: 0 auto;
+
+}
+
+main .container {
+    display: flex;
+    flex-direction: column;
+    min-width: 375px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+/* ----- HEADER ----- */
+
+header {
+    padding-bottom: 20px;
+}
+
+#header .info-bar {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0; /*Funciona melhor com flex pois não quebra layout, o margin quebra layout*/
+}
+
+#header .info-bar .container {
+    justify-content: center;
+}
+
+#header .container {
+    display: flex; /*Resolve responsividade e posicionamento*/
+    justify-content: space-between ;
+    align-items: center;
+}
+
+#main-header {
+    padding: 10px 0;
+}
+
+#header .header_logo_container {
+    width: 80px;
+    height: 80px;
+}
+
+#header .header_logo_container img {
+    width: 100%;
+    height: 100%;
+}
+
+#navBar-header .container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#navBar-header ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+#navBar-header ul a {
+    font-size: 1.3em;
+    padding: 0 8px;
+    color: #000;
+    text-decoration: none;
+}
+
+#navBar-header ul a:hover {
+    text-decoration: underline;
+}
+
+.header_search_bar {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_search_bar input {
+    width: 100%;
+    padding: 20px;
+    border-radius: 100px;
+    border: none;
+    background-color: #EEEEF0;
+    padding-left: 50px;
+}
+
+.header_search_bar i {
+    position: relative;
+    left: 8%;
+}
+
+.header_icons {
+    font-size: 30px;
+    display: flex;
+    column-gap: 20px;
+    padding-right: 40px;
+    color: inherit; /* Faz com que o ícone herde a cor do texto */
+    transition: color 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.header_icons i:hover {
+    color: rgb(77, 115, 240);
+}
+
+/* ----- FIM HEADER ------ */
+
+/* ----- MAIN CONTENT ------ */
+
+.content .container {
+    height: 100vh;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    /* column-gap: 10px; */
+    background-color: #b2d1d3;
+    padding: 70px;
+    width: 100%;
+}
+
+.content-img img {
+    width: 800px;
+}
+
+.content h1 {
+    font-size: 3em;
+    color: #fff;
+}
+
+.content-text {
+    text-align: justify;
+    line-height: 1.2em;
+    font-size: 1.23em;
+    color: #fff;
+    font-weight: bolder;
+
+}
+
+/* ----- FIM MAIN CONTENT ------ */
+
+/* ----- FOOTER ----- */
+
+.quality-group-footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 3% 10% 3% 3%;
+}
+
+.quality-item-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.quality-item-footer-circulus:hover {
+    transform: scale(1.04);
+}
+
+.quality-item-footer-circulus {
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    border-radius: 50%;
+    border: 0.3vw solid gray;
+}
+
+.quality-item-footer i::before {
+    padding: 10px;
+    font-size: 3vw;
+    color: #fff;
+  }
+  
+
+.quality-item-footer h2{
+    font-size: 90%;
+    margin: 0 auto;
+    padding-top: 7px;
+}
+
+.quality-item-footer p{
+    font-size: 90%;
+    margin: 0 auto;
+}
+
+#copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+}
+
+#copyright a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#copyright a:hover {
+    color: thistle;
+    text-decoration: underline;
+}
+/* ----- FIM FOOTER ----- */
