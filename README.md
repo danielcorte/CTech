@@ -1,30 +1,31 @@
-# Como rodar o projeto CTech
+# 🚀 Como rodar o projeto CTech
+## criado por: Daniel Corte
 
-Este guia explica como configurar e executar o projeto **CTech**. Certifique-se de que as ferramentas necessárias estão instaladas na sua máquina antes de começar.
+Este guia explica como configurar e executar o projeto **CTech**. Certifique-se de que as ferramentas necessárias estão instaladas na sua máquina antes de começar. 😊
 
 ---
 
-## Ferramentas necessárias
+## 🛠️ Ferramentas necessárias
 - [Visual Studio Code (VS Code)](https://code.visualstudio.com/)
 - [Python](https://www.python.org/)
 - [Node.js](https://nodejs.org/)
 
 ---
 
-## Passos para rodar o projeto
+## 📜 Passos para rodar o projeto
 
-### 1. Clonar o repositório
-Abra o terminal ou prompt de comando, navegue até a pasta onde deseja clonar o projeto e execute o seguinte comando:
+### 1️⃣ Clonar o repositório
+📂 Abra o terminal ou prompt de comando, navegue até a pasta onde deseja clonar o projeto e execute o seguinte comando:
 
 ```bash
 git clone https://github.com/danielcorte/CTech.git
 ```
 
-Depois, abra a pasta clonada no VS Code.
+Depois, abra a pasta clonada no VS Code. ✨
 
 ---
 
-### 2. Iniciar a API (Backend)
+### 2️⃣ Iniciar a API (Backend)
 1. Abra um terminal no VS Code.
 2. Navegue até a pasta do backend:
 
@@ -59,7 +60,7 @@ Depois, abra a pasta clonada no VS Code.
     py manage.py runserver
     ```
 
-6. Acesse o backend em seu navegador na URL:
+6. 🌐 Acesse o backend em seu navegador na URL:
 
     ```
     http://127.0.0.1:8000/
@@ -67,8 +68,8 @@ Depois, abra a pasta clonada no VS Code.
 
 ---
 
-### 3. Iniciar o Frontend
-1. Abra um novo terminal no VS Code, sem fechar o terminal do backend.
+### 3️⃣ Iniciar o Frontend
+1. Abra um **novo terminal** no VS Code, sem fechar o terminal do backend.
 2. Navegue até a pasta do frontend:
 
     ```bash
@@ -88,7 +89,7 @@ Depois, abra a pasta clonada no VS Code.
     npm run dev
     ```
 
-5. Acesse o frontend em seu navegador na URL:
+5. 🌟 Acesse o frontend em seu navegador na URL:
 
     ```
     http://localhost:5174/
@@ -96,5 +97,5 @@ Depois, abra a pasta clonada no VS Code.
 
 ---
 
-## Obrigado!
+## 🎉 Obrigado!
 Obrigado por conferir o projeto! Sinta-se à vontade para testar e explorar. 😄
